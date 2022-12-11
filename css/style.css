@@ -1,0 +1,11 @@
+#tooltip {
+    position: absolute;
+    display: none;
+    background-color: #ff3c3c;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#tooltip .pokemon-details {
+    margin-top: 10px;
+}
