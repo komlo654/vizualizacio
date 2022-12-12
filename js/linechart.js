@@ -10,7 +10,7 @@ class Linechart {
             parentElement: _config.parentElement,
             containerWidth: _config.containerWidth || 800,
             containerHeight: _config.containerHeight || 400,
-            margin: _config.margin || {top: 25, right: 20, bottom: 30, left: 50}
+            margin: _config.margin || {top: 25, right: 20, bottom: 30, left: 100}
         }
         this.data = _data;
         this.initVis();
@@ -64,8 +64,8 @@ class Linechart {
 
         vis.chart.append('text')
             .attr('class', 'axis-title')
-            .attr('y', vis.height - 15)
-            .attr('x', vis.width + 10)
+            .attr('y', vis.height + 10)
+            .attr('x', vis.width - 20)
             .attr('dy', '.71em')
             .style('text-anchor', 'end')
             .text('Year');
