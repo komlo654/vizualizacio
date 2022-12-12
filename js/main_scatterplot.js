@@ -8,7 +8,7 @@ d3.csv('data/pokemon.csv')
         });
 
         // Initialize chart
-        const scatterplot = new Scatterplot({ parentElement: '#scatterplot'}, data);
+        const scatterplot = new Scatterplot({ parentElement: '#chart'}, data);
 
         // Show chart
         scatterplot.updateVis();

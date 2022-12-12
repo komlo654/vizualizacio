@@ -9,3 +9,34 @@
 #tooltip .pokemon-details {
     margin-top: 10px;
 }
+
+/* Axes */
+.axis line {
+    fill: none;
+    stroke: #8693a0;
+    shape-rendering: crispEdges;
+}
+.axis text {
+    font-size: 13px;
+    fill: #6b6b6b;
+}
+.axis-title {
+    font-size: 13px;
+    fill: #888;
+    background-color: white;
+}
+.x-axis .domain {
+    stroke: #8693a0;
+}
+.y-axis .domain {
+    display: none;
+}
+
+.chart-area {
+    fill: #e9eff5;
+}
+.chart-line {
+    fill: none;
+    stroke: #517390;
+    stroke-width: 2px;
+}
