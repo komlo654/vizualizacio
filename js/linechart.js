@@ -34,10 +34,10 @@ class Linechart {
 
         // Initialize axes
         vis.xAxis = d3.axisBottom(vis.xScale)
-            .ticks(6)
+            .ticks(vis.data.length)
             .tickSizeOuter(0)
-            .tickPadding(10);
-        //.tickFormat(d => d + ' km');
+            .tickPadding(10)
+            .tickFormat(d3.format(""))
 
         vis.yAxis = d3.axisLeft(vis.yScale)
             .ticks(6)
