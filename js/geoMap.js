@@ -42,8 +42,8 @@ class GeoMap {
         // We crop Antartica because it takes up a lot of space that is not needed for our data
         vis.projection = d3.geoEquirectangular()
             .center([0, 15]) // set centre to further North
-            .scale([vis.width/(2*Math.PI)]) // scale to fit size of svg group
-            .translate([vis.width/2, vis.height/2]); // ensure centered within svg group
+            .scale([vis.width / 1]) // scale to fit size of svg group
+            .translate([vis.width/2, vis.height/2 + 550]); // ensure centered within svg group
 
         vis.geoPath = d3.geoPath().projection(vis.projection);
 
@@ -84,7 +84,7 @@ class GeoMap {
             .data(vis.data)
             .join('circle')
             .attr('class', 'geo-symbol')
-            .attr('r', d => vis.symbolScale(d.Capacity / 20))
+            .attr('r', d => vis.symbolScale(d.Capacity / 7))
             .attr('cx', d => vis.projection([d.Longitude,d.Latitude])[0])
             .attr('cy', d => vis.projection([d.Longitude,d.Latitude])[1]);
 
