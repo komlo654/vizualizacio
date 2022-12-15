@@ -42,7 +42,7 @@ class GeoMap {
         // We crop Antartica because it takes up a lot of space that is not needed for our data
         vis.projection = d3.geoEquirectangular()
             .center([0, 15]) // set centre to further North
-            .scale([vis.width / 1]) // scale to fit size of svg group
+            .scale([vis.width / 1]) // scale to fit size of svg group, default scale: vis.width/(2*Math.PI)
             .translate([vis.width/2, vis.height/2 + 550]); // ensure centered within svg group
 
         vis.geoPath = d3.geoPath().projection(vis.projection);
